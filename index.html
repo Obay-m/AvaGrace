@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Valentine ❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, rgb(161, 7, 7), rgb(0, 0, 0));
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .screen {
+      display: none;
+      max-width: 850px;
+      padding: 30px;
+    }
+
+    .active {
+      display: block;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 14px 30px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      background: red;
+      color: white;
+      transition: transform 0.2s;
+      max-width: 300px;
+    }
+
+    button:hover {
+      transform: scale(1.07);
+    }
+
+    .no-btn {
+      background: #b30000;
+      font-size: 0.85rem;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Screen 1: Ask -->
+  <div id="screen1" class="screen active">
+    <h1>Will you be my Valentine? Ava Grace❤️</h1>
+    <div class="buttons">
+      <button onclick="goParagraph()">Yes✅❤️</button>
+      <button class="no-btn" onclick="goNoScreen()">No❌💔</button>
+    </div>
+  </div>
+
+  <!-- Screen 2: No screen -->
+  <div id="screen2" class="screen">
+    <h2>no no try again</h2>
+    <p>(there’s only one answer. I just put this button so it doesn’t look like I’m controlling or smth)</p>
+    <button onclick="backToStart()">Go back 🔄</button>
+  </div>
+
+  <!-- Screen 3: Paragraph -->
+  <div id="screen3" class="screen">
+    <h2>not like you had an option 😌</h2>
+    
+    <p>
+      I know Valentine’s Day isn’t really my thing, but you are.
+      I agree that the day is overrated. no one should need a holiday
+      to celebrate their partner. Although I do love what it reminds me of,
+      that choosing someone matters and I choose you, today, tomorrow
+      and for however long I live.
+    </p>
+
+    <p>
+      Of course I was going to ask properly, who would I be,
+      what would I be if I didn’t.
+      I ask this in hopes I get to ask you this year and every year that follows.
+      I love having you in my life, I love everything that has to do with you,
+      the ups, the downs and whatever is in between.
+    </p>
+
+    <p>
+      You’re my better. Your maturity, your love, your personality,
+      the person you are that’s so hard to find and I stand by what I say
+      when I say there’s no one like you.
+    </p>
+
+    <p>
+      I don’t care how many times I say this but I will continue saying this,
+      you’re perfect not the type of perfect that’s flawless but the type
+      of perfection where flaws perfect it.
+    </p>
+
+    <p>
+      You’re my painted wall (i should probably use canvas from now acc) and I’m so proud of who you are,
+      you’re such a great person and I’m honestly so blessed
+      to have you in my life.
+    </p>
+
+    <p><strong>I love you with everything in me ❤️🩵</strong></p>
+  </div>
+
+  <script>
+    function goParagraph() {
+      document.getElementById("screen1").classList.remove("active");
+      document.getElementById("screen3").classList.add("active");
+    }
+
+    function goNoScreen() {
+      document.getElementById("screen1").classList.remove("active");
+      document.getElementById("screen2").classList.add("active");
+    }
+
+    function backToStart() {
+      document.getElementById("screen2").classList.remove("active");
+      document.getElementById("screen1").classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
+
+
+
